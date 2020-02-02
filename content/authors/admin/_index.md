@@ -18,7 +18,7 @@ organizations:
   url: "https://www.sheffield.ac.uk"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include nature language processing, multimodal learning and meta learning.
 
 interests:
 - Artificial Intelligence
@@ -36,7 +36,7 @@ education:
  #   year: 2009
   - course: BSc in Computer Science & Artificial Intelligence
     institution: University of Sheffield
-    years: 2018-2021
+    year: 2018-2021
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
