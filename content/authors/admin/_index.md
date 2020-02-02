@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Nelson Bighetti
+name: Ziyang Lin
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,33 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Second year Computer Science & Artificial Intelligence student
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: University of Sheffield
+  url: "https://www.sheffield.ac.uk"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
 interests:
 - Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Nature Language Processing
+- Multimodal Learning
+- Meta Learning
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+ # - course: PhD in Artificial Intelligence
+ #   institution: Stanford University
+ #   year: 2012
+ # - course: MEng in Artificial Intelligence
+ #   institution: Massachusetts Institute of Technology
+ #   year: 2009
+  - course: BSc in Computer Science & Artificial Intelligence
+    institution: University of Sheffield
+    years: 2018-2021
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
