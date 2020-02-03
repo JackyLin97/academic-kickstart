@@ -22,7 +22,7 @@ bio: My research interests include nature language processing, multimodal learni
 
 interests:
 - Artificial Intelligence
-- Nature Language Processing
+- Natural Language Processing
 - Multimodal Learning
 - Meta Learning
 
@@ -72,5 +72,5 @@ user_groups:
 - Visitors
 ---
 
-I am a 2nd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. My research interests include nature language processing, multimodal learning and meta learning.
+I am a 2nd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. My research interests include natural language processing, multimodal learning and meta learning.
 
