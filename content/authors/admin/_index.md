@@ -61,7 +61,7 @@ social:
   link: https://www.researchgate.net/profile/Ziyang_Lin
 - icon: cv
   icon_pack: ai
-  link: https://github.com/JackyLin97/academic-kickstart/static/ZiyangLin_CV2020.pdf
+  link: https://github.com/JackyLin97/academic-kickstart/blob/master/static/ZiyangLin_CV2020.pdf
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
