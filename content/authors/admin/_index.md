@@ -52,10 +52,10 @@ social:
   link: https://twitter.com/Jacky_Lin97
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link:
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link:
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Ziyang_Lin  
