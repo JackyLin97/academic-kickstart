@@ -58,7 +58,10 @@ social:
   link:
 - icon: researchgate
   icon_pack: fab
-  link: https://www.researchgate.net/profile/Ziyang_Lin  
+  link: https://www.researchgate.net/profile/Ziyang_Lin
+  - icon: cv
+  icon_pack: ai
+  link: "static/ZiyangLin_CV2020.pdf"
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
