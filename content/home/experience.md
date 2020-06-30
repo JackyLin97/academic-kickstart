@@ -17,14 +17,14 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
-# [[experience]]
-#  title = "CEO"
-#  company = "GenCoin"
+ [[experience]]
+  title = "Summer Research Student"
+  company = "Imperial College London"
 #  company_url = ""
 #  location = "California"
-#  date_start = "2017-01-01"
-#  date_end = ""
-#  description = """
+  date_start = "2020-06-06"
+  date_end = "2020-07-29"
+  description = """Participate in the 2020 NLP online research summer program directed by Professor Lucia Specia at Imperial College London."""
 #  Responsibilities include:
   
 #  * Analysing
