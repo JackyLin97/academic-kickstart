@@ -55,7 +55,7 @@ social:
   link:
 - icon: github
   icon_pack: fab
-  link:
+  link: https://github.com/JackyLin97
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Ziyang_Lin
