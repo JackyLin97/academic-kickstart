@@ -70,7 +70,7 @@ Post Evaluation Task 1 on the CodaLab
 
 ## Data Preprocessing
 ### Task One
-* Convert original headlines into normal sentences (Remove “<” and “/>” by applying RE)
+* Convert original headlines into normal sentences (Remove `<` and `/>` by applying RE)
 * Get the edited version of headlines by doing word substitution using RE
 * Do tokenization and lowercasing for each edited-original headlines pair
 
@@ -128,7 +128,7 @@ a single representation and do a normal matrix multiplication in the output laye
 #### Pre-trained LM + a regression layer (LMs applied: BERT, ALBERT, XLNet, ELECTRA)
 ##### Version 1 - Concatenate original headlines and new headlines  
 <p align="left">
- <img src="https://github.com/JackyLin97/2020_NLP_Funniness_Estimation-PyTorch/raw/master/images/lm_inputs_version_2.png" width="600" />
+ <img src="https://github.com/JackyLin97/2020_NLP_Funniness_Estimation-PyTorch/raw/master/images/lm_inputs_version_1.png" width="600" />
 </p>
 
 ##### Version 2 - Concatenate new headlines and new words  
@@ -159,9 +159,9 @@ straightly for the real classification task
 
 ## Optimizer & Learning Rate Scheduler
 ### For FFNN, CNN, RNN:
-* The optimizer ‘AdamW’ and the scheduler ‘CosineAnnealingLR’ provided by pytorch
+* The optimizer `AdamW` and the scheduler `CosineAnnealingLR` provided by pytorch
 ### For pre-trained LMs (BERT-liked LMs):
-* The optimizer ‘AdamW’ and the scheduler ‘get_linear_schedule_with_warmup’ from [Huggingface transformers]
+* The optimizer `AdamW` and the scheduler `get_linear_schedule_with_warmup` from [Huggingface transformers]
 
 ## Prime Hyperparameters
 * Learning Rate
@@ -189,7 +189,7 @@ straightly for the real classification task
 |30|1e-4|50|128|32|Ture|0.3|0.586|0.576|0.571
 
 #### Best performance achieved by Pre-trained LMs
-* WithoutDataAugmentation
+* Without Data Augmentation
   * Model: bert_base_uncased
   * Inputs structure: new headlines + new words
   * Test loss: 0.52937
