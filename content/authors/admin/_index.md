@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Second year Computer Science & Artificial Intelligence student
+role: Third year Computer Science & Artificial Intelligence student
 
 # Organizations/Affiliations
 organizations:
