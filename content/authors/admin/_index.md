@@ -18,13 +18,13 @@ organizations:
   url: "https://www.sheffield.ac.uk"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include nature language processing, multimodal learning and meta learning.
+bio: My research interests include nature language processing and speech processing.
 
 interests:
 - Probabilistic Machine Learning 
 - Natural Language Processing
-- Meta Learning
-- Multimodal Learning
+- Speech Processing
+- Digital Signal Processing
 
 education:
   courses:
