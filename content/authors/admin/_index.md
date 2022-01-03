@@ -18,7 +18,7 @@ organizations:
   url: "https://www.sheffield.ac.uk"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include nature language processing and speech processing.
+bio: My research interests include nature language processing, speech processing and music processing.
 
 interests:
 - Probabilistic Machine Learning 
@@ -36,7 +36,7 @@ education:
  #   year: 2009
   - course: BSc in Computer Science & Artificial Intelligence
     institution: University of Sheffield
-    year: 2018-2021
+    year: 2018-2022
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -75,5 +75,5 @@ user_groups:
 - Visitors
 ---
 
-I am a 3rd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. My research interests include natural language processing, multimodal learning and meta learning.
+I am a 3rd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. My research interests include nature language processing, speech processing and music processing.
 
