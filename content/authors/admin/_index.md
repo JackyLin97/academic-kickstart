@@ -78,5 +78,5 @@ user_groups:
 - Visitors
 ---
 
-I am a 3rd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. My research interests include nature language processing, speech processing and music processing.
+I am a 3rd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. Personally, I am interested in the research domains involving natural language processing, speech processing and digital signal processing.
 
