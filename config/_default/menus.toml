@@ -14,16 +14,6 @@
   weight = 20
 
 [[main]]
-  name = "Skills"
-  url = "#skills"
-  weight = 30
-
-[[main]]
-  name = "Domain Knowledge"
-  url = "#domain_knowledge"
-  weight = 35
-
-[[main]]
   name = "Projects"
   url = "#projects"
   weight = 40
@@ -32,11 +22,6 @@
   name = "Posts"
   url = "#posts"
   weight = 50
-
-[[main]]
-  name = "Languages"
-  url = "#languages"
-  weight = 60
 
 [[main]]
   name = "Contact"
