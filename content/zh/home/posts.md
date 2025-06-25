@@ -1,29 +1,29 @@
 +++
-# A Recent Blog Posts section created with the Pages widget.
-# This section displays recent blog posts from `content/post/`.
+# 使用Pages小部件创建的最近博客文章部分。
+# 此部分显示来自`content/post/`的最近博客文章。
 
-widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
-weight = 15  # Order that this section will appear.
+widget = "pages"  # 参见 https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # 这个文件代表一个页面部分。
+active = true  # 激活这个小部件？true/false
+weight = 15  # 此部分将出现的顺序。
 
-title = "Recent Posts"
+title = "最近文章"
 subtitle = ""
 
 [content]
-  # Page type to display. E.g. post, talk, or publication.
+  # 要显示的页面类型。例如：post, talk, 或 publication。
   page_type = "post"
   
-  # Choose how much pages you would like to display (0 = all pages)
+  # 选择要显示的页面数量（0 = 所有页面）
   count = 5
   
-  # Choose how many pages you would like to offset by
+  # 选择要偏移的页面数量
   offset = 0
 
-  # Page order. Descending (desc) or ascending (asc) date.
+  # 页面顺序。降序（desc）或升序（asc）日期。
   order = "desc"
 
-  # Filter posts by a taxonomy term.
+  # 按分类术语过滤文章。
   [content.filters]
     tag = ""
     category = ""
@@ -31,37 +31,37 @@ subtitle = ""
     exclude_featured = false
   
 [design]
-  # Toggle between the various page layout types.
-  #   1 = List
-  #   2 = Compact
-  #   3 = Card
-  #   4 = Citation (publication only)
+  # 在各种页面布局类型之间切换。
+  #   1 = 列表
+  #   2 = 紧凑
+  #   3 = 卡片
+  #   4 = 引用（仅限出版物）
   view = 2
   
 [design.background]
-  # Apply a background color, gradient, or image.
-  #   Uncomment (by removing `#`) an option to apply it.
-  #   Choose a light or dark text color by setting `text_color_light`.
-  #   Any HTML color name or Hex value is valid.
+  # 应用背景颜色、渐变或图像。
+  #   取消注释（通过删除`#`）一个选项来应用它。
+  #   通过设置`text_color_light`选择浅色或深色文本颜色。
+  #   任何HTML颜色名称或十六进制值都有效。
   
-  # Background color.
+  # 背景颜色。
   # color = "navy"
   
-  # Background gradient.
+  # 背景渐变。
   # gradient_start = "DeepSkyBlue"
   # gradient_end = "SkyBlue"
   
-  # Background image.
-  # image = "background.jpg"  # Name of image in `static/img/`.
-  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+  # 背景图像。
+  # image = "background.jpg"  # `static/img/`中的图像名称。
+  # image_darken = 0.6  # 使图像变暗？范围0-1，其中0是透明的，1是不透明的。
 
-  # Text color (true=light or false=dark).
-  # text_color_light = true  
+  # 文本颜色（true=浅色或false=深色）。
+  # text_color_light = true
   
 [advanced]
- # Custom CSS. 
+ # 自定义CSS。
  css_style = ""
  
- # CSS class.
+ # CSS类。
  css_class = ""
 +++

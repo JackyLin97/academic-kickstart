@@ -57,7 +57,7 @@ social:
 # 要启用，请将您的简历/CV复制到`static/files/cv.pdf`并取消下面几行的注释。
 - icon: cv
   icon_pack: ai
-  link: files/Ziyang_Lin_CV_2025.pdf
+  link: /zh/files/Ziyang_Lin_CV_2025.pdf
 
 # 输入电子邮件以显示Gravatar（如果在配置中启用了Gravatar）
 email: "ziyanglin1997@163.com"

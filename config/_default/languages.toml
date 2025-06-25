@@ -19,7 +19,7 @@
     url = "#about"
     weight = 10
   [[zh.menu.main]]
-    name = "经验"
+    name = "经历"
     url = "#experience"
     weight = 20
   [[zh.menu.main]]
@@ -36,5 +36,5 @@
     weight = 70
   [[zh.menu.main]]
     name = "简历"
-    url = "files/Ziyang_Lin_CV_2025.pdf"
+    url = "/zh/files/Ziyang_Lin_CV_2025.pdf"
     weight = 80

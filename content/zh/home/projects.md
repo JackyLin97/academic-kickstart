@@ -1,77 +1,77 @@
 +++
-# A Projects section created with the Portfolio widget.
-widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
-weight = 25  # Order that this section will appear.
+# 使用Portfolio小部件创建的项目部分。
+widget = "portfolio"  # 参见 https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # 这个文件代表一个页面部分。
+active = true  # 激活这个小部件？true/false
+weight = 25  # 此部分将出现的顺序。
 
-title = "Projects"
+title = "项目"
 subtitle = ""
 
 [content]
-  # Page type to display. E.g. project.
+  # 要显示的页面类型。例如：project。
   page_type = "project"
   
-  # Filter toolbar (optional).
-  # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
-  # To show all items, set `tag` to "*".
-  # To filter by a specific tag, set `tag` to an existing tag name.
-  # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
+  # 过滤工具栏（可选）。
+  # 根据需要添加或删除任意数量的过滤器（`[[content.filter_button]]`实例）。
+  # 要显示所有项目，将`tag`设置为"*"。
+  # 要按特定标签过滤，将`tag`设置为现有标签名称。
+  # 要删除工具栏，删除/注释下面所有的`[[content.filter_button]]`实例。
   
-  # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
+  # 默认过滤器索引（例如，0对应于下面的第一个`[[filter_button]]`实例）。
   filter_default = 0
   
   # [[content.filter_button]]
-  #   name = "All"
+  #   name = "全部"
   #   tag = "*"
   
   # [[content.filter_button]]
-  #   name = "Deep Learning"
+  #   name = "深度学习"
   #   tag = "Deep Learning"
   
   # [[content.filter_button]]
-  #   name = "Other"
+  #   name = "其他"
   #   tag = "Demo"
 
 [design]
-  # Choose how many columns the section has. Valid values: 1 or 2.
+  # 选择此部分有多少列。有效值：1或2。
   columns = "2"
 
-  # Toggle between the various page layout types.
-  #   1 = List
-  #   2 = Compact
-  #   3 = Card
-  #   5 = Showcase
+  # 在各种页面布局类型之间切换。
+  #   1 = 列表
+  #   2 = 紧凑
+  #   3 = 卡片
+  #   5 = 展示
   view = 3
 
-  # For Showcase view, flip alternate rows?
+  # 对于展示视图，是否翻转交替行？
   flip_alt_rows = false
 
 [design.background]
-  # Apply a background color, gradient, or image.
-  #   Uncomment (by removing `#`) an option to apply it.
-  #   Choose a light or dark text color by setting `text_color_light`.
-  #   Any HTML color name or Hex value is valid.
+  # 应用背景颜色、渐变或图像。
+  #   取消注释（通过删除`#`）一个选项来应用它。
+  #   通过设置`text_color_light`选择浅色或深色文本颜色。
+  #   任何HTML颜色名称或十六进制值都有效。
   
-  # Background color.
+  # 背景颜色。
   # color = "navy"
   
-  # Background gradient.
+  # 背景渐变。
   # gradient_start = "DeepSkyBlue"
   # gradient_end = "SkyBlue"
   
-  # Background image.
-  # image = "background.jpg"  # Name of image in `static/img/`.
-  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+  # 背景图像。
+  # image = "background.jpg"  # `static/img/`中的图像名称。
+  # image_darken = 0.6  # 使图像变暗？范围0-1，其中0是透明的，1是不透明的。
 
-  # Text color (true=light or false=dark).
-  # text_color_light = true  
+  # 文本颜色（true=浅色或false=深色）。
+  # text_color_light = true
   
 [advanced]
- # Custom CSS. 
+ # 自定义CSS。
  css_style = ""
  
- # CSS class.
+ # CSS类。
  css_class = ""
 +++
 
