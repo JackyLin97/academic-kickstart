@@ -57,7 +57,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/Ziyang_Lin_CV_2022.pdf
+  link: files/Ziyang_Lin_CV_2025.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "ziyanglin1997@163.com"
