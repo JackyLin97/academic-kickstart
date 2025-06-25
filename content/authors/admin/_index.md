@@ -10,30 +10,25 @@ authors:
 superuser: true
 
 # Role/position
-role: Third year Computer Science & Artificial Intelligence student
+role: AI Software Development Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: University of Sheffield
-  url: "https://www.sheffield.ac.uk"
+- name: Shenzhen Zhiruantong Technology Co., Ltd.
+  url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include nature language processing, speech processing and music processing.
+bio: My research interests include large language models, retrieval-augmented generation, multimodal learning, and speech processing.
 
 interests:
-- Probabilistic Machine Learning 
-- Natural Language Processing
+- Large Language Models & Application Development
+- Retrieval-Augmented Generation (RAG)
+- Multimodal Learning
 - Speech Processing
-- Digital Signal Processing
+- Machine Learning Fundamentals
 
 education:
   courses:
- # - course: PhD in Artificial Intelligence
- #   institution: Stanford University
- #   year: 2012
- # - course: MEng in Artificial Intelligence
- #   institution: Massachusetts Institute of Technology
- #   year: 2009
   - course: BSc in Computer Science & Artificial Intelligence
     institution: University of Sheffield
     year: 2018-2022
@@ -45,31 +40,27 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:zlin19@sheffield.ac.uk
- # link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/Jacky_Lin97
-- icon: google-scholar
-  icon_pack: ai
-  link:
-- icon: github
-  icon_pack: fab
-  link: https://github.com/JackyLin97
-- icon: researchgate
-  icon_pack: fab
-  link: https://www.researchgate.net/profile/Ziyang_Lin
+  link: mailto:ziyanglin1997@163.com
+- icon: phone
+  icon_pack: fas
+  link: tel:13537685397
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/ziyang-lin
+- icon: github
+  icon_pack: fab
+  link: https://github.com/JackyLin97
+- icon: weixin
+  icon_pack: fab
+  link: "#"
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/Ziyang_Lin_CV_2022.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "605960704@qq.com"
+email: "ziyanglin1997@163.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -78,5 +69,7 @@ user_groups:
 - Visitors
 ---
 
-I am a 3rd year undergraduate studying Computer Science & Artificial Intelligence at the University of Sheffield. Personally, I am interested in the research domains involving natural language processing, speech processing and digital signal processing.
+I am an AI Software Development Engineer at Shenzhen Zhiruantong Technology Co., Ltd., focusing on RAG technology applications and real-time multimodal model application development. I graduated with a BSc in Computer Science & Artificial Intelligence from the University of Sheffield in July 2022, where I completed my final year dissertation project on "Deep Learning-Based Automatic Speech Recognition" under the supervision of Dr. Anton Ragni.
+
+My professional experience includes working as a Software Development Engineer at Shenzhen Institute of Metrology and Quality Inspection's Technology R&D Center from November 2022 to March 2024, where I led the development of various software projects and applied computer vision technologies.
 
