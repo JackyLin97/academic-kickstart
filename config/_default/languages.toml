@@ -5,16 +5,36 @@
 # Configure the English version of the site.
 [en]
   languageCode = "en-us"
-  # contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
-# Uncomment the lines below to configure your website in a second language.
-#[zh]
-#  languageCode = "zh-Hans"
-#  contentDir = "content/zh"
-#  title = "Chinese website title..."
-#  [zh.params]
-#    description = "Site description in Chinese..."
-#  [[zh.menu.main]]
-#    name = "Wo"
-#    url = "#about"
-#    weight = 1
+# Chinese version
+[zh]
+  languageCode = "zh-Hans"
+  contentDir = "content/zh"
+  title = "林子杨的个人网站"
+  [zh.params]
+    description = "林子杨的个人学术网站"
+  [[zh.menu.main]]
+    name = "首页"
+    url = "#about"
+    weight = 10
+  [[zh.menu.main]]
+    name = "经验"
+    url = "#experience"
+    weight = 20
+  [[zh.menu.main]]
+    name = "文章"
+    url = "#posts"
+    weight = 30
+  [[zh.menu.main]]
+    name = "项目"
+    url = "#projects"
+    weight = 40
+  [[zh.menu.main]]
+    name = "联系"
+    url = "#contact"
+    weight = 70
+  [[zh.menu.main]]
+    name = "简历"
+    url = "files/Ziyang_Lin_CV_2025.pdf"
+    weight = 80

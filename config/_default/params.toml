@@ -160,6 +160,10 @@ link_authors = true
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
 plugins_js  = []
 
+# Show language chooser in site header
+[languages]
+  show_language_chooser = true
+
 # Available address formats.
 [address_formats]
   en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
