@@ -1,6 +1,6 @@
 +++
 # 使用Pages小部件创建的最近博客文章部分。
-# 此部分显示来自`content/post/`的最近博客文章。
+# 此部分显示来自`content/zh/post/`的最近博客文章。
 
 widget = "pages"  # 参见 https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # 这个文件代表一个页面部分。
