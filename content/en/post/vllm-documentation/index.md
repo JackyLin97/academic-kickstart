@@ -34,8 +34,6 @@ image:
 projects: []
 ---
 
-# vLLM Deep Dive: Technical Principles and Practical Guide
-
 ## 1. Introduction to vLLM
 
 vLLM is an open-source inference and serving engine designed for large language models (LLMs), renowned for its high throughput and memory efficiency. In the field of LLM serving, vLLM addresses a core pain point: traditional inference systems are inefficient when handling the key-value cache (KV Cache) in Transformer models' attention mechanism, resulting in significant memory waste and limited inference speed.
@@ -70,8 +68,6 @@ The advantages of this design include:
 1.  **Eliminating Internal Fragmentation**: Since blocks are of fixed size, a sequence's last block may have some unused space, but this waste is far less than that caused by reserving continuous memory for the entire sequence.
 2.  **Flexible Memory Allocation**: Blocks are stored in non-continuous memory space, making memory management more flexible, similar to how operating systems manage physical memory pages.
 3.  **Efficient Memory Sharing**: PagedAttention makes sharing KV Cache between different sequences exceptionally simple and efficient. For example, in parallel sampling or beam search, multiple candidate sequences originate from the same prompt. vLLM allows these sequences to share KV blocks storing the prompt portion, only needing to allocate new, independent blocks for each sequence when generating new tokens. This "Copy-on-Write" mechanism greatly reduces the memory overhead of complex decoding algorithms.
-
-![PagedAttention](https://vllm.ai/assets/images/paged-attention.png)
 
 Below is a Mermaid diagram that more intuitively illustrates PagedAttention's memory management approach:
 

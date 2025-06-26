@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Load Mermaid script
   var script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js';
+  script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js';
   script.onload = function() {
-    // Initialize Mermaid
+    // Initialize Mermaid with advanced configuration
     mermaid.initialize({
       startOnLoad: true,
       theme: 'default',
@@ -12,6 +12,24 @@ document.addEventListener('DOMContentLoaded', function() {
       flowchart: {
         useMaxWidth: false,
         htmlLabels: true
+      },
+      er: {
+        useMaxWidth: false
+      },
+      sequence: {
+        useMaxWidth: false
+      },
+      journey: {
+        useMaxWidth: false
+      },
+      gantt: {
+        useMaxWidth: false
+      },
+      pie: {
+        useMaxWidth: false
+      },
+      requirement: {
+        useMaxWidth: false
       }
     });
     
