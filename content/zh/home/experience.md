@@ -61,7 +61,7 @@ date_format = "2006年1月"
 
 [[experience]]
   title = "活动策划"
-  company = "谢菲尔德大学人工智能协会"
+  company = "谢菲尔德大学人工智能社团"
   company_url = ""
   location = "谢菲尔德，英国"
   date_start = "2020-09-01"

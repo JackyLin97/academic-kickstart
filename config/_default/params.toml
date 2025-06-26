@@ -169,7 +169,7 @@ plugins_js  = ["mermaid"]
 
 # Available address formats.
 [address_formats]
-  en-us = {order = ['street', 'city', 'region', 'postcode', 'country'], delimiters = [', ', ', ', ' ', ', ']}
+  en-us = {order = ['street', 'city', 'region', 'postcode', 'country'], delimiters = [', ', ', ', ', ', ', ']}
   en-gb = {order = ['street', 'city', 'region', 'postcode', 'country'], delimiters = [', ', ', ', ', ', ', ']}
   de = {order = ['street', 'postcode', 'city'], delimiters = [', ', ' ', '']}
   fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
