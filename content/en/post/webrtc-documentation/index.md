@@ -34,8 +34,6 @@ image:
 projects: []
 ---
 
-# WebRTC Technical Documentation
-
 ## 1. Introduction
 
 WebRTC (Web Real-Time Communication) is an open-source technology that enables real-time voice and video communication in web browsers. It allows direct peer-to-peer (P2P) audio, video, and data sharing between browsers without requiring any plugins or third-party software.

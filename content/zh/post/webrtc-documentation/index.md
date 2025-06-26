@@ -34,8 +34,6 @@ image:
 projects: []
 ---
 
-# WebRTC 技术文档
-
 ## 1. 引言
 
 WebRTC（Web Real-Time Communication，网页即时通信）是一项支持网页浏览器进行实时语音对话或视频对话的开源技术。它允许浏览器之间直接进行点对点（Peer-to-Peer, P2P）的音视频和数据共享，而无需安装任何插件或第三方软件。
