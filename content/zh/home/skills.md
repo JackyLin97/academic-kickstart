@@ -2,7 +2,7 @@
 # 使用Featurette小部件创建的技能部分。
 widget = "featurette"  # 参见 https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # 这个文件代表一个页面部分。
-active = true  # 激活这个小部件？true/false
+active = false  # 激活这个小部件？true/false
 weight = 30  # 此部分将出现的顺序。
 
 title = "技能"
