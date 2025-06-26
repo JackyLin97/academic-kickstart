@@ -14,21 +14,22 @@
   title = "林子杨的个人网站"
   [zh.params]
     description = "林子杨的个人学术网站"
+    address = {street = "南山区", city = "深圳市", region = "广东省", country = "中国", country_code = "CN"}
   [[zh.menu.main]]
     name = "首页"
     url = "#about"
     weight = 10
   [[zh.menu.main]]
-    name = "经历"
-    url = "#experience"
-    weight = 20
-  [[zh.menu.main]]
     name = "文章"
     url = "#posts"
-    weight = 30
+    weight = 20
   [[zh.menu.main]]
     name = "项目"
     url = "#projects"
+    weight = 30
+  [[zh.menu.main]]
+    name = "经历"
+    url = "#experience"
     weight = 40
   [[zh.menu.main]]
     name = "联系"
@@ -36,5 +37,5 @@
     weight = 70
   [[zh.menu.main]]
     name = "简历"
-    url = "/zh/files/Ziyang_Lin_CV_2025.pdf"
+    url = "/zh/files/林子杨简历2025.pdf"
     weight = 80

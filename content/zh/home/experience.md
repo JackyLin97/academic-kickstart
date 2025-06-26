@@ -3,7 +3,7 @@
 widget = "experience"  # 参见 https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # 这个文件代表一个页面部分。
 active = true  # 激活这个小部件？true/false
-weight = 20  # 此部分将出现的顺序。
+weight = 30  # 此部分将出现的顺序。
 
 title = "经历"
 subtitle = ""
