@@ -158,7 +158,11 @@ link_authors = true
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = []
+plugins_js  = ["mermaid"]
+
+# Mermaid diagram support
+[diagram]
+  enable = true
 
 # Show language chooser in site header
 [languages]

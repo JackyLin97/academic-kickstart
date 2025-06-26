@@ -34,8 +34,6 @@ image:
 projects: []
 ---
 
-# LoRA Technical Documentation: A Comprehensive Guide
-
 ## 1. Introduction: Why LoRA?
 
 In today's rapidly evolving landscape of Large Language Models (LLMs) and generative AI, we've witnessed an explosive growth in model sizes, ranging from hundreds of millions to trillions of parameters. These massive models demonstrate remarkable capabilities across various tasks. However, a significant challenge emerges: how can we fine-tune these models for specific downstream tasks?
