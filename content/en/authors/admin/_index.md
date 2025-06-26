@@ -41,9 +41,6 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:ziyanglin1997@163.com
-- icon: phone
-  icon_pack: fas
-  link: tel:13537685397
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/ziyang-lin
