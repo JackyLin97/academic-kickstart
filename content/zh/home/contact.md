@@ -19,7 +19,6 @@ email_form = 0
 
 # 联系详情
 email = "ziyanglin1997@163.com"
-phone = "+86 13537685397"
 address = {city = "深圳", region = "", country = "中国", country_code = "CN"}
 wechat = "zi24yang10la8"
 +++

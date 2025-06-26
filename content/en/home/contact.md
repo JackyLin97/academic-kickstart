@@ -19,7 +19,6 @@ email_form = 0
 
 # Contact details
 email = "ziyanglin1997@163.com"
-phone = "+86 13537685397"
 address = {city = "Shenzhen", region = "", country = "China", country_code = "CN"}
 wechat = "zi24yang10la8"
 +++
