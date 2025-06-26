@@ -31,7 +31,7 @@ date_format = "Jan 2006"
   * Participating in advanced Prompt Engineering practices to enhance LLM application effectiveness
   * Developing financial data analysis and government affairs Q&A agents
   * Participating in the company's proprietary multimodal low-latency real-time voice conversation agent
-  * Optimizing deployment and system architecture design based on vLLM and llama.cpp
+  * Optimizing deployment of large language models and embedding models based on vLLM and llama.cpp
   """
 
 [[experience]]
@@ -44,9 +44,9 @@ date_format = "Jan 2006"
   description = """
   Responsibilities include:
   
-  * Leading the development of an electric vehicle charging station verification platform website
-  * Core development work on the CT online inspection of electronic components project
-  * Applying computer vision technologies and developing industrial camera applications
+  * Developing an electric vehicle charging station verification platform website
+  * Development of CT online inspection of electronic components project
+  * Developing industrial camera applications based on computer vision technologies
   * Participating in cross-platform application development based on the Qt framework
   """
 
