@@ -1,7 +1,7 @@
 ---
-title: "Speech Synthesis Evolution: From Traditional TTS to Multimodal Voice Systems"
+title: "Speech Synthesis Evolution: From Traditional TTS to Multimodal Voice Models"
 subtitle: ""
-summary: "This article explores the evolution of speech synthesis technology, from the limitations of traditional TTS models to the integration of large language models, analyzing the technical principles of audio encoders and neural codecs, and how modern TTS systems achieve context-aware conversational speech synthesis."
+summary: "This article explores the evolution of speech synthesis technology, from the limitations of traditional TTS models to the integration of large language models, analyzing the technical principles of audio encoders and neural codecs, and how modern TTS models achieve context-aware conversational speech synthesis."
 authors:
 - admin
 language: en
@@ -42,9 +42,9 @@ Traditional Text-to-Speech (TTS) models have excelled in voice cloning and speec
 1. Acoustic Model (e.g., Tacotron): Converts text into intermediate acoustic representations (such as spectrograms).
 2. Vocoder (e.g., WaveGlow, HiFi-GAN): Transforms acoustic representations into waveform audio.
 
-Despite these systems' ability to produce realistic sounds, their primary focus remains on replicating a speaker's voice, lacking the flexibility to adapt in dynamic, context-sensitive conversations.
+Despite these models' ability to produce realistic sounds, their primary focus remains on replicating a speaker's voice, lacking the flexibility to adapt in dynamic, context-sensitive conversations.
 
-### 1.2 Initial Integration of LLMs: Context-Aware Conversational Voice Systems
+### 1.2 Initial Integration of LLMs: Context-Aware Conversational Voice Models
 
 The emergence of Large Language Models (LLMs) has provided rich reasoning capabilities and contextual understanding. Integrating LLMs into the TTS workflow enables synthesis that goes beyond mere sound production to intelligent conversational responses within context.
 
@@ -73,9 +73,9 @@ To address the above bottlenecks, researchers have attempted to directly input s
 - **Neural Codecs**: Such as DAC, Encodec, XCodec, which convert audio waveforms into discrete token sequences, bridging the gap between continuous audio and discrete token requirements.
   > New Challenge: Audio tokens are far more numerous than text, and the quantization process may lead to loss of details.
 
-## 2. TTS System Structure
+## 2. TTS Model Structure
 
-The basic structural flow of traditional TTS systems is typically as follows:
+The basic structural flow of traditional TTS models is typically as follows:
 
 ```mermaid
 graph TD
@@ -248,7 +248,7 @@ The frontend of TTS systems needs to process received audio data, primarily in t
 
 ### 4.3 Audio Data Flow in TTS Systems
 
-In TTS systems, audio data follows this flow from generation to playback:
+In TTS models, audio data follows this flow from generation to playback:
 
 ```mermaid
 graph LR
@@ -305,7 +305,7 @@ Main methods include:
 
 ### 5.3 Context-Aware Speech Synthesis
 
-Traditional TTS systems often lack understanding of context, resulting in generated speech lacking appropriate emotional and prosodic variations. After fusion with LLMs, systems can generate more natural speech based on conversation context.
+Traditional TTS models often lack understanding of context, resulting in generated speech lacking appropriate emotional and prosodic variations. After fusion with LLMs, models can generate more natural speech based on conversation context.
 
 Key technologies include:
 - **Context Encoding**: Encoding conversation history into context vectors that influence speech generation
@@ -314,19 +314,19 @@ Key technologies include:
 
 ## 6. Future Development Directions
 
-As technology continues to advance, TTS systems are developing in the following directions:
+As technology continues to advance, TTS models are developing in the following directions:
 
-### 6.1 End-to-End Multimodal Systems
+### 6.1 End-to-End Multimodal Models
 
-Future voice systems will break down barriers between modules, achieving true end-to-end training and inference. Such systems will be able to generate natural speech outputs directly from raw inputs (text, speech, images, etc.) without explicit conversion of intermediate representations.
+Future voice models will break down barriers between modules, achieving true end-to-end training and inference. Such models will be able to generate natural speech outputs directly from raw inputs (text, speech, images, etc.) without explicit conversion of intermediate representations.
 
 ### 6.2 Personalization and Adaptability
 
-Next-generation TTS systems will place greater emphasis on personalization and adaptability, automatically adjusting speech characteristics based on user preferences, conversation history, and environmental factors, providing a more natural and humanized interaction experience.
+Next-generation TTS models will place greater emphasis on personalization and adaptability, automatically adjusting speech characteristics based on user preferences, conversation history, and environmental factors, providing a more natural and humanized interaction experience.
 
 ### 6.3 Low-Resource Scenario Optimization
 
-For low-resource languages and special application scenarios, researchers are exploring how to leverage transfer learning, meta-learning, and data augmentation techniques to build high-quality TTS systems under limited data conditions.
+For low-resource languages and special application scenarios, researchers are exploring how to leverage transfer learning, meta-learning, and data augmentation techniques to build high-quality TTS models under limited data conditions.
 
 ### 6.4 Real-Time Interactive Speech Synthesis
 
@@ -334,4 +334,4 @@ With the advancement of algorithms and hardware, real-time interactive speech sy
 
 ## 7. Conclusion
 
-Speech synthesis technology is undergoing a significant transformation from traditional TTS to multimodal voice systems. Through the integration of large language models, neural codecs, and advanced audio processing technologies, modern TTS systems can not only generate high-quality speech but also understand context, express emotions, and naturally adapt in dynamic conversations. Despite facing many challenges, with continuous technological advancement, we can expect more intelligent, natural, and personalized voice interaction experiences.
+Speech synthesis technology is undergoing a significant transformation from traditional TTS to multimodal voice models. Through the integration of large language models, neural codecs, and advanced audio processing technologies, modern TTS models can not only generate high-quality speech but also understand context, express emotions, and naturally adapt in dynamic conversations. Despite facing many challenges, with continuous technological advancement, we can expect more intelligent, natural, and personalized voice interaction experiences.
