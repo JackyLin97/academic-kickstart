@@ -34,8 +34,6 @@ image:
 projects: []
 ---
 
-# Deep Learning Model Quantization: llama.cpp and vLLM
-
 ## 1. Introduction
 
 As large language models (LLMs) continue to grow in scale and complexity, their deployment and inference costs have become increasingly expensive. Model quantization, as a key optimization technique, significantly reduces model storage requirements, memory consumption, and computational load by lowering the numerical precision of model weights and activation values, enabling efficient inference on resource-constrained devices such as mobile and edge devices.
