@@ -39,7 +39,7 @@ projects: []
 Behind the powerful capabilities of large language models (LLMs) is a series of complex hyperparameters working silently. Whether you're deploying a local inference service like vLLM or calling OpenAI's API, precisely tuning these parameters is crucial for achieving ideal performance, cost, and output quality. This document provides a detailed analysis of two key categories of hyperparameters: **Generation (Sampling) Parameters** and **Deployment (Serving) Parameters**, helping you fully master their functions, values, impacts, and best practices across different scenarios.
 ---
 
-## Part 1: Generation (Sampling) Parameters — Controlling Model Creativity and Determinism
+### Part 1: Generation (Sampling) Parameters — Controlling Model Creativity and Determinism
 
 Generation parameters directly control the model's behavior when generating the next token. They primarily revolve around a core question: how to select from thousands of possible next words in the probability distribution provided by the model.
 
@@ -156,7 +156,7 @@ These two parameters are more refined versions of `repetition_penalty`.
 
 ---
 
-## Part 2: Deployment (Serving) Parameters — Optimizing Service Performance and Capacity
+### Part 2: Deployment (Serving) Parameters — Optimizing Service Performance and Capacity
 
 Deployment parameters determine how an LLM inference service manages GPU resources, handles concurrent requests, and optimizes overall throughput and latency. These parameters are particularly important in high-performance inference engines like vLLM.
 
@@ -252,7 +252,7 @@ These two parameters are used for deploying extremely large models across multip
 
 ---
 
-## Summary and Best Practices
+### Summary and Best Practices
 
 | Scenario | `temperature` | `top_p` | `repetition_penalty` | `gpu_memory_utilization` | `max_num_seqs` | `max_model_len` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
