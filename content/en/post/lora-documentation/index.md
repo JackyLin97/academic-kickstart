@@ -1,5 +1,5 @@
 ---
-title: "LoRA Technical Documentation: A Comprehensive Guide"
+title: "LoRA Technical Guide: Parameter-Efficient Fine-Tuning for Large Models"
 subtitle: ""
 summary: "This article provides a comprehensive guide to LoRA (Low-Rank Adaptation) technology, covering its core principles, advantages, practical implementation, and deployment strategies."
 authors:

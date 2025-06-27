@@ -1,5 +1,5 @@
 ---
-title: "WebRTC 技术文档：网页实时通信详解"
+title: "WebRTC 技术详解：网页实时通信详解"
 subtitle: ""
 summary: "本文详细介绍了WebRTC（Web Real-Time Communication）技术的核心原理、连接过程、NAT穿越技术以及安全机制，帮助读者全面理解这一强大的实时通信技术。"
 authors:

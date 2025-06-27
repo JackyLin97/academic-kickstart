@@ -1,5 +1,5 @@
 ---
-title: "WebRTC Technical Documentation: A Comprehensive Guide"
+title: "WebRTC Technical Guide: Web-Based Real-Time Communication Framework"
 subtitle: ""
 summary: "This article provides a comprehensive guide to WebRTC (Web Real-Time Communication) technology, covering its core principles, connection process, NAT traversal techniques, and security mechanisms."
 authors:

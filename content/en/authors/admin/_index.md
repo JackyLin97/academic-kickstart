@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include large language models, retrieval-augmented generation, multimodal learning, and speech processing.
+bio: My technical interests include large language models, retrieval-augmented generation, multimodal learning, and speech processing.
 
 interests:
 - Large Language Models & Application Development

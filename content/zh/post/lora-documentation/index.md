@@ -1,5 +1,5 @@
 ---
-title: "LoRA 技术文档：深入浅出理解与实战"
+title: "LoRA 技术详解：深入浅出理解与实战"
 subtitle: ""
 summary: "本文深入浅出地介绍了LoRA（Low-Rank Adaptation）技术的核心原理、优势、实战指南以及部署策略，帮助读者全面理解这一革命性的参数高效微调方法。"
 authors:
