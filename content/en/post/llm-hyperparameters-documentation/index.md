@@ -36,7 +36,7 @@ projects: []
 
 ## Introduction
 
-Behind the powerful capabilities of large language models (LLMs) is a series of complex hyperparameters working silently. Whether you're deploying a local inference service like vLLM or calling OpenAI's API, precisely tuning these parameters is crucial for achieving ideal performance, cost, and output quality. This document provides a detailed analysis of two key categories of hyperparameters: **Generation (Sampling) Parameters** and **Deployment (Serving) Parameters**, helping you fully master their functions, values, impacts, and best practices across different scenarios.
+<span style="font-size: 0.9em;">Behind the powerful capabilities of large language models (LLMs) is a series of complex hyperparameters working silently. Whether you're deploying a local inference service like vLLM or calling OpenAI's API, precisely tuning these parameters is crucial for achieving ideal performance, cost, and output quality. This document provides a detailed analysis of two key categories of hyperparameters: **Generation (Sampling) Parameters** and **Deployment (Serving) Parameters**, helping you fully master their functions, values, impacts, and best practices across different scenarios.</span>
 ---
 
 ### Part 1: Generation (Sampling) Parameters — Controlling Model Creativity and Determinism
