@@ -48,7 +48,7 @@ Despite these models' ability to produce realistic sounds, their primary focus r
 
 The emergence of Large Language Models (LLMs) has provided rich reasoning capabilities and contextual understanding. Integrating LLMs into the TTS workflow enables synthesis that goes beyond mere sound production to intelligent conversational responses within context.
 
-Typical cascade workflow (speech-to-speech system):
+Typical cascade workflow (speech-to-speech model):
 - STT (Speech-to-Text): e.g., Whisper
 - LLM (Contextual Understanding and Generation): e.g., fine-tuned Llama
 - TTS (Text-to-Speech): e.g., ElevenLabs
@@ -207,7 +207,7 @@ TTS systems support multiple audio formats, each with specific use cases and tra
 - Professional audio processing
 - Testing and development environments
 
-### 4.2 TTS Interface Transmission Technologies
+### 4.2 TTS Audio Transmission and Processing
 
 #### 4.2.1 Basic Audio Parameters
 In TTS systems, audio data typically has the following basic parameters:
