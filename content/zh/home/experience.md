@@ -60,7 +60,7 @@ date_format = "2006年1月"
   description = """参与由Lucia Specia教授指导的2020年NLP在线研究夏季项目，开发回归和分类模型来评估编辑后新闻标题的幽默程度。"""
 
 [[experience]]
-  title = "活动策划"
+  title = "活动组织负责人"
   company = "谢菲尔德大学人工智能社团"
   company_url = ""
   location = "谢菲尔德，英国"
