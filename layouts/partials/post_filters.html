@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // 筛选文章
       postItems.forEach(item => {
         if (filter === 'all') {
-          item.style.display = 'block';
+          item.style.display = '';  // 使用空字符串而不是'block'，保持原始display属性
         } else {
           const categories = item.getAttribute('data-categories').split(',');
           if (categories.includes(filter)) {
-            item.style.display = 'block';
+            item.style.display = '';  // 使用空字符串而不是'block'
           } else {
             item.style.display = 'none';
           }
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const summary = item.querySelector('.post-summary')?.textContent.toLowerCase() || '';
       
       if (title.includes(searchTerm) || summary.includes(searchTerm)) {
-        item.style.display = 'block';
+        item.style.display = '';  // 使用空字符串而不是'block'，保持原始display属性
       } else {
         item.style.display = 'none';
       }

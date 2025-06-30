@@ -8,21 +8,26 @@
 
   <!-- 文章表格 -->
   <div class="article-table mb-5">
-    <table class="table table-hover">
+    <table class="table table-hover table-fixed">
+      <colgroup>
+        <col style="width: 50%;">
+        <col style="width: 15%;">
+        <col style="width: 35%;">
+      </colgroup>
       <thead>
         <tr>
-          <th>{{ i18n "title" | default "Title" }}</th>
-          <th>{{ i18n "date" | default "Date" }}</th>
-          <th>{{ i18n "categories" | default "Categories" }}</th>
+          <th class="title-col">{{ i18n "title" | default "Title" }}</th>
+          <th class="date-col">{{ i18n "date" | default "Date" }}</th>
+          <th class="categories-col">{{ i18n "categories" | default "Categories" }}</th>
         </tr>
       </thead>
       <tbody>
         {{ range .Paginator.Pages }}
         {{ $categories := apply .Params.categories "string" "." }}
         <tr class="post-item" data-categories="{{ delimit $categories "," }}">
-          <td class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-          <td>{{ .Date.Format "2006-01-02" }}</td>
-          <td>
+          <td class="post-title title-col"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+          <td class="date-col">{{ .Date.Format "2006-01-02" }}</td>
+          <td class="categories-col">
             {{ range .Params.categories }}
             <a href="{{ (site.GetPage (printf "categories/%s" .)).RelPermalink }}" class="badge badge-primary mr-1">{{ . }}</a>
             {{ end }}
