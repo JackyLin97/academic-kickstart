@@ -68,3 +68,5 @@ user_groups:
 
 我是深圳智软通科技有限公司的AI软件开发工程师，专注于RAG技术应用和基于多模态语音模型的实时对话智能体应用开发。我于2022年7月获得谢菲尔德大学计算机科学与人工智能学士学位，在那里我完成了题为"GLOM for Automatic Speech Recognition"的毕业论文项目（在自动语音识别领域参考GLOM架构理念，设计开发拥有更佳可解释性的表征学习模型），该项目由Anton Ragni博士指导。
 
+> **"I'm gonna make it happen"**
+
