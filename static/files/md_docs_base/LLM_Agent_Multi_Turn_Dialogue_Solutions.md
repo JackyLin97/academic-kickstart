@@ -112,7 +112,78 @@ stateDiagram-v2
     }
     Confirmation --> Collect_Cuisine: 用户修改
 ```
-**FSM vs. ReAct**：FSM 结构清晰、可预测性强、易于调试，非常适合任务型对话。而 ReAct 更加灵活、通用，适合处理开放式、需要复杂推理和动态规划的任务。在实践中，两者也常常结合使用（例如，在 FSM 的某个状态中使用 ReAct 来处理一个开放式子任务）。
+#### FSM 的现代化演进：动态与层级化
+
+传统的 FSM 依赖于硬编码的规则进行状态转移，这在面对复杂多变的真实场景时会显得僵化。现代 Agent 设计将 FSM 与 LLM 的能力深度结合，催生了更智能、更灵活的架构。
+
+-   **LLM 驱动的状态转移**：与其用固定的 `if-else` 规则判断状态切换，不如让 LLM 来做决策。在每个循环中，将对话历史、当前用户输入以及所有可能的目标状态列表传给 LLM，让它基于强大的上下文理解能力，判断出最应该进入的下一个状态。这使得状态转移从“规则驱动”升级为“智能驱动”。
+
+-   **状态专属提示词（State-specific Prompts）**：这是一种强大的动态提示词应用。可以为 FSM 中的每一个核心状态节点，预先设计一套高度优化的专属提示词。当 Agent 进入某个状态（如 `Collect_Cuisine`），系统会立即启用该状态对应的 Prompt。这个 Prompt 不仅指导 LLM 如何在该节点与用户交互，还可以定义该状态下可调用的工具、应遵循的规则等。这使得 Agent 在不同任务阶段可以“戴上不同的帽子”，表现出极高的专业性和任务相关性。
+
+##### 示例：机票预订子流程中 `Query_Flights` 状态的专属提示词
+```
+# IDENTITY
+You are a world-class flight booking assistant AI.
+
+# STATE & GOAL
+You are currently in the "Query_Flights" state.
+Your SOLE GOAL is to collect the necessary information to search for flights.
+The necessary information is: origin city, destination city, and departure date.
+
+# AVAILABLE TOOLS
+- `flight_search_api(origin: str, destination: str, date: str)`: Use this tool to search for flights.
+
+# CONTEXT
+- Conversation History:
+  {conversation_history}
+- User Profile:
+  {user_profile}
+- Current State Data:
+  {state_data}  # e.g., {"origin": "Shanghai", "destination": "Beijing", "date": null}
+
+# RULES
+1.  Analyze the Current State Data first.
+2.  If any necessary information (origin, destination, date) is missing, you MUST ask the user for it clearly.
+3.  Phrase your questions to sound helpful and natural.
+4.  Once all information is collected, your FINAL ACTION MUST be to call the `flight_search_api` tool with the correct parameters.
+5.  Do not make up information. Do not ask for information that is not required (e.g., return date, unless specified by the user).
+
+# OUTPUT FORMAT
+Your output must be a single JSON object.
+- To ask a question: {"action": "ask_user", "question": "Your question here."}
+- To call a tool: {"action": "call_tool", "tool_name": "flight_search_api", "tool_params": {"origin": "...", "destination": "...", "date": "..."}}
+```
+
+-   **层级化状态机（Hierarchical FSM）**：对于大型复杂任务，单一的扁平状态图难以管理。层级化状态机引入了“SOP 嵌套”或“子状态图”的概念。一个高阶的 FSM（主 SOP）负责规划宏观的业务流程（如“完成一次旅行预订”），当流程进行到某个宏观状态（如“预订机票”）时，可以激活一个内嵌的、更详细的子 FSM（子 SOP），该子 FSM 专门负责处理“查询航班 -> 选择座位 -> 确认支付”等一系列精细化操作。这种模式极大地提升了任务拆解的模块化程度和可管理性。
+
+##### Mermaid 图：层级化状态机（SOP 嵌套）示例
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> MainSOP
+    state "主流程：旅行规划 (Main SOP)" as MainSOP {
+        [*] --> Collect_Trip_Info
+        note right of Collect_Trip_Info
+            用户: "帮我规划去北京的旅行"
+        end note
+
+        Collect_Trip_Info --> Book_Flight_Sub_SOP : "好的，先订机票"
+
+        state "子流程：预订机票" as Book_Flight_Sub_SOP {
+            direction LR
+            [*] --> Query_Flights: "需要哪天出发？"
+            Query_Flights --> Select_Seat: "已为您找到航班，请选座"
+            Select_Seat --> Confirm_Payment: "座位已选，请支付"
+            Confirm_Payment --> [*]: 支付成功
+        }
+        
+        Book_Flight_Sub_SOP --> Book_Hotel: "机票已定，再看酒店"
+        Book_Hotel --> Finalize_Trip: "酒店已定，行程最终确认"
+        Finalize_Trip --> [*]
+    }
+```
+
+**FSM vs. ReAct**：FSM 结构清晰、可预测性强、易于调试，非常适合任务型对话。而 ReAct 更加灵活、通用，适合处理开放式、需要复杂推理和动态规划的任务。在实践中，两者也常常结合使用（例如，在 FSM 的某个状态中使用 ReAct 来处理一个开放式子任务，或者如上文所述，用 LLM 驱动 FSM 的状态转移本身）。
 
 ---
 
@@ -154,6 +225,24 @@ stateDiagram-v2
     - `ConversationSummaryMemory`: 每次都对整个对话历史进行摘要，成本高。
     - `ConversationSummaryBufferMemory`: 一种混合策略。它保留最近 `k` 轮的完整对话，同时维护一个对更早期对话的滚动摘要。这在成本和信息保真度之间取得了很好的平衡。
 
+### 4.5 用户画像记忆 (User Profile Memory)
+
+这是一种更主动、更高级的结构化记忆，旨在超越单次对话，为用户建立一个持久化的、动态更新的“画像”。Agent 不仅记住对话内容，更记住“你是谁”。
+
+- **宏观理念**: 将用户的偏好、习惯、历史选择、甚至人口统计学信息（在用户授权下）结构化地存储起来。在每次交互时，将这份“用户画像”作为关键上下文直接注入到 Prompt 中，让 LLM 从一开始就“了解”它的交流对象。
+
+- **底层实现**:
+    1.  **数据结构**: 通常以键值对（如 JSON 对象）的形式维护用户元数据。例如：`{"user_id": "123", "preferred_language": "English", "dietary_restrictions": ["vegetarian"], "home_city": "Shanghai"}`。
+    2.  **Prompt 注入**: 在构建最终的 Prompt 时，将序列化后的用户画像字符串（如 `[UserProfile]...[/UserProfile]`）作为一个固定部分放入上下文。
+    3.  **动态维护**: 这是该机制的核心。在对话结束后，Agent 或一个后台进程会分析本轮交互，判断是否需要更新用户画像。例如，当用户说“我最近搬到了北京”，系统需要有一个机制来更新 `home_city` 字段。这个更新过程本身可能就需要一次独立的 LLM 调用来做信息提取和决策。
+
+- **优势**:
+    - **高度个性化**: Agent 可以提供前瞻性的、高度定制化的服务。
+    - **对话效率**: 避免了重复询问用户的基本偏好，让交互更流畅。
+- **挑战**:
+    - **更新机制的复杂性**: 如何准确、安全地更新用户画像是一个技术难点。
+    - **Token 消耗**: 用户画像会占用宝贵的上下文窗口空间。
+    - **数据隐私**: 必须严格遵守用户隐私政策。
 ---
 
 ## 5. 总结与展望

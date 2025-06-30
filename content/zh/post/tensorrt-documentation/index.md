@@ -1,4 +1,38 @@
-# NVIDIA TensorRT 详细技术文档
+---
+title: "TensorRT深度解析：高性能深度学习推理引擎"
+subtitle: ""
+summary: "本文深入介绍了NVIDIA TensorRT的核心概念、关键特性、工作流程以及TensorRT-LLM，帮助开发者充分利用GPU加速深度学习推理，实现低延迟高吞吐量的模型部署。"
+authors:
+- admin
+language: zh
+tags:
+- 深度学习
+- 模型推理
+- NVIDIA
+- TensorRT
+- GPU加速
+categories:
+- 技术文档
+- 人工智能
+date: "2025-06-30T06:00:00Z"
+lastmod: "2025-06-30T06:00:00Z"
+featured: true
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
 
 ## 1. 引言
 
@@ -220,7 +254,6 @@ TensorRT 正在快速迭代，以下是一些最新的重要功能：
     pytest --verbose
     ```
 
-希望这份文档能帮助您更好地理解和使用 NVIDIA TensorRT。
 ## 7. TensorRT-LLM：为大语言模型（LLM）推理而生
 
 随着大语言模型（LLM）的规模和复杂性呈指数级增长，传统的推理优化方法面临着前所未有的挑战。为了应对这些挑战，NVIDIA 推出了 TensorRT-LLM，一个专门为加速和优化 LLM 推理而设计的开源库。它构建于 TensorRT 之上，并封装了针对 LLM 的一系列尖端优化技术。
@@ -295,10 +328,10 @@ gantt
 
 **问题**: 在自回归生成过程中，KV 缓存会随着序列长度的增加而线性增长，消耗大量显存。传统的做法是为每个请求预分配一个连续的、能容纳最大序列长度的内存块，这导致了严重的内存碎片和浪费。
 
-**解决方案**: 受到操作系统虚拟内存分页的启发，TensorRT-LLM 引入了 Paged KV Cache。它将 KV 缓存分割成固定大小的“块”（Blocks），并按需分配。
+**解决方案**: 受到操作系统虚拟内存分页的启发，TensorRT-LLM 引入了 Paged KV Cache。它将 KV 缓存分割成固定大小的"块"（Blocks），并按需分配。
 *   **非连续存储**: 逻辑上连续的 Token 的 KV 缓存可以存储在物理上不连续的块中。
 *   **内存共享**: 对于复杂的场景（如并行采样、Beam Search），不同序列之间可以共享相同的 KV 缓存块（例如共享 Prompt部分的缓存），从而大幅节省内存。
-*   **优化的 Attention 核**: TensorRT-LLM 使用了如 FlashAttention、MQA/GQA 等 специально优化的 Attention 内核，可以直接操作这些非连续的缓存块，避免了数据拷贝开销。
+*   **优化的 Attention 核**: TensorRT-LLM 使用了如 FlashAttention、MQA/GQA 等专门优化的 Attention 内核，可以直接操作这些非连续的缓存块，避免了数据拷贝开销。
 
 #### 7.3.3. 张量并行与流水线并行 (Tensor & Pipeline Parallelism)
 
