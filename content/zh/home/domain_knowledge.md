@@ -48,5 +48,5 @@ subtitle = ""
   icon = "square-root-alt"
   icon_pack = "fas"
   name = "数学基础"
-  description = "线性代数、多变量微积分、概率论、信息论"
+  description = "线性代数、多变量微积分、概率论"
 +++

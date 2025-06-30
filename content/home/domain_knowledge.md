@@ -48,5 +48,5 @@ subtitle = ""
   icon = "square-root-alt"
   icon_pack = "fas"
   name = "Mathematical Foundations"
-  description = "Linear algebra, multivariate calculus, probability theory, information theory"
+  description = "Linear algebra, multivariate calculus, probability theory"
 +++
