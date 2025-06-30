@@ -1,0 +1,63 @@
+{{ define "main" }}
+
+<div class="universal-wrapper">
+  <h1>{{ .Title }}</h1>
+
+  <!-- 归档内容 -->
+  <div class="archive-content">
+    {{ range .Site.RegularPages.GroupByDate "2006" }}
+    <div class="archive-year mb-4">
+      <h2>{{ .Key }}</h2>
+      {{ range .Pages.GroupByDate "January" }}
+      <div class="archive-month mb-3">
+        <h3 class="archive-month-header">{{ .Key }}</h3>
+        <div class="archive-posts">
+          {{ range .Pages }}
+          <div class="archive-entry mb-2">
+            <span class="archive-entry-date mr-2">{{ .Date.Format "01-02" }}</span>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params.categories }}
+            <span class="archive-categories">
+              {{ range . }}
+              <a href="{{ (site.GetPage (printf "categories/%s" .)).RelPermalink }}" class="badge badge-primary mr-1">{{ . }}</a>
+              {{ end }}
+            </span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+  .archive-year h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .archive-month-header {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .archive-entry {
+    padding-left: 20px;
+  }
+  
+  .archive-entry-date {
+    color: #666;
+    font-family: monospace;
+  }
+  
+  .archive-categories {
+    margin-left: 10px;
+  }
+</style>
+
+{{ end }}

@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<div class="universal-wrapper">
+  <h1>{{ .Title }}</h1>
+  
+  <!-- 引入分类导航栏和搜索框 -->
+  {{ partial "post_filters.html" . }}
+
+  <!-- 文章表格 -->
+  <div class="article-table mb-5">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>{{ i18n "title" | default "Title" }}</th>
+          <th>{{ i18n "date" | default "Date" }}</th>
+          <th>{{ i18n "categories" | default "Categories" }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range .Paginator.Pages }}
+        {{ $categories := apply .Params.categories "string" "." }}
+        <tr class="post-item" data-categories="{{ delimit $categories "," }}">
+          <td class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+          <td>{{ .Date.Format "2006-01-02" }}</td>
+          <td>
+            {{ range .Params.categories }}
+            <a href="{{ (site.GetPage (printf "categories/%s" .)).RelPermalink }}" class="badge badge-primary mr-1">{{ . }}</a>
+            {{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- 分页 -->
+  {{ partial "pagination" . }}
+</div>
+
+{{ end }}

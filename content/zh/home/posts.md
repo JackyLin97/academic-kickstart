@@ -15,7 +15,7 @@ subtitle = ""
   page_type = "post"
   
   # 选择要显示的页面数量（0 = 所有页面）
-  count = 5
+  count = 8
   
   # 选择要偏移的页面数量
   offset = 0
