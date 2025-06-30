@@ -28,42 +28,6 @@
   url = "#contact"
   weight = 70
 
-[[main]]
-  name = "Archive"
-  url = "/en/archive/"
-  weight = 45
-  lang = "en"
-
-[[main]]
-  name = "Categories"
-  url = "/en/categories/"
-  weight = 50
-  lang = "en"
-
-[[main]]
-  name = "Tags"
-  url = "/en/tags/"
-  weight = 60
-  lang = "en"
-
-[[main]]
-  name = "归档"
-  url = "/zh/archive/"
-  weight = 45
-  lang = "zh"
-
-[[main]]
-  name = "分类"
-  url = "/zh/categories/"
-  weight = 50
-  lang = "zh"
-
-[[main]]
-  name = "标签"
-  url = "/zh/tags/"
-  weight = 60
-  lang = "zh"
-
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
  [[main]]
