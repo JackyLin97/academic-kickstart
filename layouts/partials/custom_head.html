@@ -3,35 +3,80 @@
 
 <!-- 自定义样式 -->
 <style>
-  /* 文章表格样式 */
-  .article-table th {
+  /* 文章列表样式 - 使用div布局 */
+  .post-list-container {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .post-list-header {
     background-color: #f8f9fa;
+    font-weight: bold;
+    border-bottom: 2px solid #dee2e6;
+    padding: 0.75rem;
   }
   
-  .article-table .badge {
-    font-size: 0.8rem;
+  .post-item {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.75rem;
   }
   
-  /* 固定表格列宽 */
-  .table-fixed {
-    table-layout: fixed;
-    width: 100%;
+  .post-item:last-child {
+    border-bottom: none;
   }
   
-  .title-col {
-    width: 50%;
+  .post-item:nth-child(even) {
+    background-color: rgba(0,0,0,0.02);
+  }
+  
+  /* 固定列宽 */
+  .post-title-header, .post-title-col {
+    flex: 0 0 50%;
+    padding-right: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
   
-  .date-col {
-    width: 15%;
+  .post-date-header, .post-date-col {
+    flex: 0 0 15%;
     text-align: center;
   }
   
-  .categories-col {
-    width: 35%;
+  .post-categories-header, .post-categories-col {
+    flex: 0 0 35%;
+  }
+  
+  /* 徽章样式 */
+  .badge {
+    font-size: 0.8rem;
+  }
+  
+  /* 搜索结果信息 */
+  #filter-result-info {
+    display: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.25rem;
+  }
+  
+  /* 响应式调整 */
+  @media (max-width: 768px) {
+    .post-date-header, .post-date-col {
+      display: none;
+    }
+    
+    .post-title-header, .post-title-col {
+      flex: 0 0 60%;
+    }
+    
+    .post-categories-header, .post-categories-col {
+      flex: 0 0 40%;
+    }
   }
   
   /* 归档页面样式 */

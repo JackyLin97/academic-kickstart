@@ -4,42 +4,153 @@
   <h1>{{ .Title }}</h1>
   
   <!-- 引入分类导航栏和搜索框 -->
-  {{ partial "post_filters.html" . }}
-
-  <!-- 文章表格 -->
-  <div class="article-table mb-5">
-    <table class="table table-hover table-fixed">
-      <colgroup>
-        <col style="width: 50%;">
-        <col style="width: 15%;">
-        <col style="width: 35%;">
-      </colgroup>
-      <thead>
-        <tr>
-          <th class="title-col">{{ i18n "title" | default "Title" }}</th>
-          <th class="date-col">{{ i18n "date" | default "Date" }}</th>
-          <th class="categories-col">{{ i18n "categories" | default "Categories" }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ range .Paginator.Pages }}
-        {{ $categories := apply .Params.categories "string" "." }}
-        <tr class="post-item" data-categories="{{ delimit $categories "," }}">
-          <td class="post-title title-col"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-          <td class="date-col">{{ .Date.Format "2006-01-02" }}</td>
-          <td class="categories-col">
-            {{ range .Params.categories }}
-            <a href="{{ (site.GetPage (printf "categories/%s" .)).RelPermalink }}" class="badge badge-primary mr-1">{{ . }}</a>
-            {{ end }}
-          </td>
-        </tr>
+  <div class="category-nav mb-4">
+    <div class="d-flex flex-wrap align-items-center">
+      <span class="mr-2 font-weight-bold">{{ i18n "filter_by" | default "Filter by:" }}</span>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-sm btn-primary filter-btn active" data-filter="all">
+          {{ i18n "all" | default "All" }}
+        </button>
+        {{ range $name, $items := .Site.Taxonomies.categories }}
+        <button type="button" class="btn btn-sm btn-outline-primary filter-btn" data-filter="{{ $name }}">
+          {{ $name }} <span class="badge badge-light">{{ len $items }}</span>
+        </button>
         {{ end }}
-      </tbody>
-    </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 搜索框 -->
+  <div class="post-search mb-4">
+    <div class="input-group">
+      <input type="text" class="form-control" id="post-search-input" placeholder="{{ i18n "search_posts" | default "Search posts..." }}">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" id="post-search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 筛选结果信息 -->
+  <div id="filter-result-info" class="alert alert-warning" style="display: none;">
+    没有找到匹配的文章
+  </div>
+  
+  <!-- 文章列表 - 使用div布局代替表格 -->
+  <div class="post-list-container mb-5">
+    <!-- 表头 -->
+    <div class="post-list-header d-flex">
+      <div class="post-title-header">{{ i18n "title" | default "Title" }}</div>
+      <div class="post-date-header">{{ i18n "date" | default "Date" }}</div>
+      <div class="post-categories-header">{{ i18n "categories" | default "Categories" }}</div>
+    </div>
+    
+    <!-- 文章列表 -->
+    {{ range .Paginator.Pages }}
+    {{ $categories := apply .Params.categories "string" "." }}
+    <div class="post-item d-flex" data-categories="{{ delimit $categories "," }}">
+      <div class="post-title-col">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+      <div class="post-date-col">
+        {{ .Date.Format "2006-01-02" }}
+      </div>
+      <div class="post-categories-col">
+        {{ range .Params.categories }}
+        <a href="{{ (site.GetPage (printf "categories/%s" .)).RelPermalink }}" class="badge badge-primary mr-1">{{ . }}</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
   </div>
   
   <!-- 分页 -->
   {{ partial "pagination" . }}
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 分类筛选功能
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const postItems = document.querySelectorAll('.post-item');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      
+      // 更新按钮状态
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // 筛选文章
+      let foundItems = 0;
+      postItems.forEach(item => {
+        if (filter === 'all') {
+          item.style.display = '';
+          foundItems++;
+        } else {
+          const categories = item.getAttribute('data-categories').split(',');
+          if (categories.includes(filter)) {
+            item.style.display = '';
+            foundItems++;
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+      
+      // 显示筛选结果信息
+      const resultInfo = document.getElementById('filter-result-info');
+      if (resultInfo) {
+        if (foundItems === 0) {
+          resultInfo.textContent = '没有找到匹配的文章';
+          resultInfo.style.display = 'block';
+        } else {
+          resultInfo.style.display = 'none';
+        }
+      }
+    });
+  });
+  
+  // 搜索功能
+  const searchInput = document.getElementById('post-search-input');
+  const searchButton = document.getElementById('post-search-button');
+  
+  function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase();
+    let foundItems = 0;
+    
+    postItems.forEach(item => {
+      const title = item.querySelector('.post-title-col').textContent.toLowerCase();
+      
+      if (title.includes(searchTerm)) {
+        item.style.display = '';
+        foundItems++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    
+    // 显示搜索结果信息
+    const resultInfo = document.getElementById('filter-result-info');
+    if (resultInfo) {
+      if (foundItems === 0) {
+        resultInfo.textContent = '没有找到匹配的文章';
+        resultInfo.style.display = 'block';
+      } else {
+        resultInfo.style.display = 'none';
+      }
+    }
+  }
+  
+  searchButton.addEventListener('click', performSearch);
+  searchInput.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+      performSearch();
+    }
+  });
+});
+</script>
 
 {{ end }}
