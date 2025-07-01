@@ -67,6 +67,3 @@ user_groups:
 ---
 
 I am an AI Software Development Engineer at Shenzhen Zhiruantong Technology Co., Ltd., focusing on RAG technology applications and real-time conversational agent development based on multimodal speech models. I graduated with a BSc in Computer Science & Artificial Intelligence from the University of Sheffield in July 2022, where I completed my final year dissertation project on "GLOM for Automatic Speech Recognition" (designing and developing a representation learning model with better interpretability in the field of automatic speech recognition by referencing the concept of GLOM architecture) under the supervision of Dr. Anton Ragni.
-
-> **"I'm gonna make it happen"**
-
